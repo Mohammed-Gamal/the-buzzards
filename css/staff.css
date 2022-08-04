@@ -1,0 +1,7 @@
+@import url("main.css");
+
+/* Start Staff Section */
+.staff-section {
+  padding: calc(var(--section-padding) - 30px) 0;
+}
+/* End Staff Section */

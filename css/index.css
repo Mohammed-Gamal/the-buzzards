@@ -1,0 +1,241 @@
+@import url("main.css");
+
+/* Start Landing */
+.landing {
+  position: relative;
+  padding: var(--section-padding) 0;
+}
+.landing::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - var(--section-padding));
+  background-color: #ddd;
+  transform-origin: top left;
+  transform: skewY(-6deg);
+  -webkit-transform: skewY(-6deg);
+  -moz-transform: skewY(-6deg);
+  -ms-transform: skewY(-6deg);
+  -o-transform: skewY(-6deg);
+  z-index: -1;
+}
+.landing .container {
+  display: flex;
+  padding-top: 150px;
+  position: relative;
+}
+@media (min-width: 992px) {
+  .landing {
+    min-height: calc(100vh - 87.84px);
+  }
+}
+@media (max-width: 991px) {
+  .landing {
+    min-height: calc(100vh - 137.39px);
+  }
+  .landing .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .landing {
+    min-height: calc(100vh - 80.47px);
+  }
+}
+.landing .text {
+  flex-basis: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.landing .text h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 39px;
+  letter-spacing: -2px;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #333;
+  animation: typewriter 5s both steps(26), blink 0.5s infinite;
+  -webkit-animation: typewriter 5s both steps(26), blink 0.5s infinite;
+}
+.landing .text p {
+  color: #777;
+  font-size: 21px;
+  line-height: 1.6;
+}
+@media (max-width: 767px) {
+  .landing .text h2 {
+    font-size: 32px;
+    width: fit-content;
+    border: none;
+    animation: none;
+    -webkit-animation: none;
+  }
+  .landing .text p {
+    font-size: 17px;
+  }
+}
+.landing .text p a.lsrcr {
+  color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.landing .text p a.lsrcr:hover {
+  opacity: 0.8;
+}
+.landing .image {
+  flex: 1;
+}
+.landing .image img {
+  height: 200px;
+  max-width: 100%;
+}
+@media (max-width: 991px) {
+  .landing .image img {
+    height: 160px;
+    max-width: 100%;
+  }
+}
+/* End Landing */
+
+/* Start staff-team */
+.staff-team {
+  padding: var(--section-padding) 0;
+  position: relative;
+  background-color: var(--third-color);
+}
+.staff-team .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.staff-team .member-card {
+  padding: 20px;
+  background-color: white;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  box-shadow: 1px 1px 5px rgb(0 0 0 / 5%);
+  position: relative;
+}
+.staff-team .member-card img.user-icon {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -50px;
+  right: -10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 7px solid var(--third-color);
+  background-color: #fff;
+}
+.staff-team .member-card,
+.staff-team .member-card img.user-icon {
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.staff-team .member-card:hover,
+.staff-team .member-card img.user-icon:hover {
+  transform: scale(1.07);
+  -webkit-transform: scale(1.07);
+  -moz-transform: scale(1.07);
+  -ms-transform: scale(1.07);
+  -o-transform: scale(1.07);
+  box-shadow: 1px 0px 9px rgb(0 0 0 / 20%);
+}
+.staff-team .member-card h3 {
+  margin: 0 0 10px;
+}
+.staff-team .member-card span.title {
+  display: block;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #777;
+  border-bottom: 1px solid #ddd;
+}
+.staff-team .member-card p {
+  margin: 10px 0 0;
+  line-height: 1.7;
+  color: #777;
+}
+/* End staff-team */
+
+/* Start ex-staff & ex-testers */
+.exmemb-section {
+  padding: var(--section-padding) 0;
+}
+.exmemb-section .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.exmemb-section .container .ex-title {
+  padding: 12px 30px;
+  font-size: 26px;
+  color: var(--main-color);
+  border: 8px dashed var(--main-color);
+  transition: all var(--main-transition) linear;
+  -webkit-transition: all var(--main-transition) linear;
+  -moz-transition: all var(--main-transition) linear;
+  -ms-transition: all var(--main-transition) linear;
+  -o-transition: all var(--main-transition) linear;
+  user-select: none;
+  cursor: help;
+}
+.exmemb-section .container .ex-title:hover {
+  border: 8px double #fff;
+  background-color: var(--main-color);
+  color: white;
+}
+.exmemb-section .container table {
+  width: 80%;
+}
+.exmemb-section .container table thead {
+  background-color: #f6f9fc;
+}
+.exmemb-section .container table thead th {
+  padding: 12px 15px;
+  font-size: 22px;
+  border: 1px solid #ddd;
+}
+.exmemb-section .container table tbody tr td {
+  border: 1px solid #ddd;
+}
+.exmemb-section .container table tbody tr td:first-of-type {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #f6f9fc;
+}
+.exmemb-section .container table tbody tr td:nth-of-type(2) {
+  padding: 7px;
+}
+.exmemb-section .container table tbody tr td:last-of-type {
+  text-align: center;
+}
+.exmemb-section .container table tbody tr td p {
+  padding: 0 0 5px 25px;
+  font-size: 18px;
+  color: #777;
+}
+/* Start ex-staff & ex-testers */

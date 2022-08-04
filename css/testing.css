@@ -1,0 +1,288 @@
+@import url("main.css");
+
+/* Start testing Section */
+.testing-section {
+  padding: calc(var(--section-padding) - 30px) 0;
+}
+.guides-container .box {
+  padding: 25px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: #f6f9fc;
+  box-shadow: 1px 0 10px rgb(0 0 0 / 20%);
+}
+.guides-container .box h3 {
+  font-size: 23px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+.guides-container .box p:first-of-type {
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 12px 0;
+}
+.guides-container .box p:nth-of-type(2) {
+  padding: 15px 0;
+  margin-top: 15px;
+  border-top: 1px solid #ddd;
+  font-size: 19px;
+  font-weight: bold;
+}
+.guides-container .box p:nth-of-type(3) {
+  line-height: 1.5;
+  color: #777;
+  margin-bottom: 10px;
+}
+.guides-container .box p:nth-of-type(3) span {
+  font-weight: bold;
+  color: red;
+}
+.guides-container .box p:nth-of-type(3) span.spec {
+  display: inline-block;
+  margin-top: 10px;
+}
+.guides-container .box ol li {
+  list-style: auto;
+  color: #777;
+  list-style: auto;
+  padding-left: 5px;
+  margin-left: 40px;
+  line-height: 2;
+}
+.guides-container .box ol li ul {
+  list-style: auto;
+}
+.guides-container .box ol li ul li {
+  list-style-type: square;
+}
+
+.testing-questions .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testing-questions .container table {
+  width: 100%;
+}
+.testing-questions .container table thead {
+  background-color: #f6f9fc;
+}
+.testing-questions .container table thead th {
+  padding: 12px 15px;
+  font-size: 22px;
+  border: 1px solid #ddd;
+}
+.testing-questions .container table tbody tr td {
+  border: 1px solid #ddd;
+}
+.testing-questions .container table tbody tr td:first-of-type {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #f6f9fc;
+}
+.testing-questions .container table tbody tr td:last-of-type {
+  padding: 0 20px;
+}
+.testing-questions .container table tbody tr td p {
+  padding: 10px 15px;
+  font-size: 18px;
+  color: #777;
+}
+.testing-questions .container table tbody tr td button {
+  display: block;
+  color: white;
+  border: none;
+  background-color: var(--main-color);
+  padding: 10px 25px;
+  margin: 0 auto;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.testing-questions .container table tbody tr td button:hover {
+  opacity: 0.8;
+}
+.testing-questions .container table tbody tr td p span {
+  color: red;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 5px;
+}
+.testing-system .results-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  background-color: #fafafa;
+  min-height: 200px;
+  box-shadow: 1px 0 10px rgb(0 0 0 / 20%);
+}
+.testing-system .results-container .get-results {
+  width: 65%;
+  display: flex;
+  background-color: #f6f9fc;
+  border: 1px solid #cccccc40;
+  box-shadow: 1px 0 5px rgb(0 0 0 / 10%);
+}
+.testing-system .results-container .get-results p {
+  width: 100%;
+  padding: 15px 25px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: #777;
+  font-size: 21px;
+}
+.testing-system .results-container .get-results p span {
+  color: red;
+}
+.testing-system .results-container .get-results button {
+  display: block;
+  border: none;
+  background: none;
+  color: var(--main-color);
+  margin-right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  user-select: none;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.testing-system .results-container .get-results button:hover {
+  opacity: 0.9;
+  transform: scale(1.07);
+  -webkit-transform: scale(1.07);
+  -moz-transform: scale(1.07);
+  -ms-transform: scale(1.07);
+  -o-transform: scale(1.07);
+}
+.testing-system .results-container > button {
+  display: block;
+  border: none;
+  background: none;
+  font-size: 45px;
+  color: var(--main-color);
+  cursor: pointer;
+  user-select: none;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.testing-system .results-container > button:focus {
+  outline: none;
+}
+.testing-system .results-container > button:hover {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  opacity: 0.9;
+}
+/* End testing Section */
+
+/* ==================================================================================== */
+/* ==================================================================================== */
+/* ==================================================================================== */
+/* ==================================================================================== */
+
+.template .code-wrapper {
+  position: relative;
+}
+.template .code-wrapper p {
+  padding: 14px 25px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--main-color);
+  border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -ms-border-radius: 5px 5px 0 0;
+  -o-border-radius: 5px 5px 0 0;
+}
+.template .code-wrapper div.code {
+  display: block;
+  padding: 0 25px;
+  white-space: pre-wrap;
+  overflow: auto;
+  color: #ddd;
+  background-color: #343a40;
+  line-height: 1.8;
+  border-radius: 0 0 7px 7px;
+  -webkit-border-radius: 0 0 7px 7px;
+  -moz-border-radius: 0 0 7px 7px;
+  -ms-border-radius: 0 0 7px 7px;
+  -o-border-radius: 0 0 7px 7px;
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+.template .code-wrapper button.copy {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 70px;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--main-color);
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+  animation: fadeIn 1s 1;
+  -webkit-animation: fadeIn 1s 1;
+  z-index: 2;
+}
+.template .code-wrapper button.copy:hover {
+  opacity: 0.7;
+}
+.template .code-wrapper button.copy:focus {
+  outline: none;
+}
+p.copy-message {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  color: white;
+  background-color: var(--main-color);
+  font-size: 22px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
