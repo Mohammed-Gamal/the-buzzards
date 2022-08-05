@@ -51,6 +51,8 @@ securityForm.onsubmit = (e) => {
 };
 
 window.onload = function () {
+  securityInputPass.focus();
+    
   let pass = JSON.parse(window.sessionStorage.getItem("Password"));
 
   if (pass == true) {
