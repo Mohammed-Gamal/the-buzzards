@@ -142,6 +142,16 @@ cpyFinalResBtn.parentElement.nextElementSibling.onclick = () => {
     ++finalResValue;
 };
 
+// handle decrease answered questions number
+cpyFinalResBtn.parentElement.nextElementSibling.nextElementSibling.onclick =
+  () => {
+    if (finalResValue == 0)
+      return (cpyFinalResBtn.previousElementSibling.firstElementChild.textContent = 0);
+
+    cpyFinalResBtn.previousElementSibling.firstElementChild.textContent =
+      --finalResValue;
+  };
+
 // copy text to clipboard function
 function copyText(text) {
   if (navigator.clipboard) {
@@ -154,6 +164,6 @@ function copyText(text) {
       }, 1000);
     });
   } else {
-    console.log("Browser Not compatible");
+    console.log("Browser not compatible!");
   }
 }
