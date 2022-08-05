@@ -67,6 +67,17 @@ hr {
 /* End Global Rules */
 
 /* Start Components */
+span.scroll-progress {
+  display: none; /* display: block; */
+  width: 0;
+  height: 8px;
+  background-color: var(--main-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
 i.go-up {
   display: none;
   position: fixed;
