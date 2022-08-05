@@ -13,32 +13,48 @@ async function renderBlocks() {
 }
 
 // handle disabling inspect element
-document.body.oncontextmenu = () => {
-  return false;
-};
+// document.body.oncontextmenu = () => {
+//   return false;
+// };
 
-document.onkeydown = function (e) {
-  if (event.keyCode == 123) {
-    return false;
-  }
-  if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
-    return false;
-  }
-  if (e.ctrlKey && e.shiftKey && e.keyCode == "C".charCodeAt(0)) {
-    return false;
-  }
-  if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
-    return false;
-  }
-  if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
-    return false;
-  }
-};
+// document.onkeydown = function (e) {
+//   if (event.keyCode == 123) {
+//     return false;
+//   }
+//   if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
+//     return false;
+//   }
+//   if (e.ctrlKey && e.shiftKey && e.keyCode == "C".charCodeAt(0)) {
+//     return false;
+//   }
+//   if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
+//     return false;
+//   }
+//   if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
+//     return false;
+//   }
+// };
 
-// handle scroll-up button
+// handle scroll progress bar
+let scrollProgressSpan = document.querySelector("span.scroll-progress"),
+  headerElement = document.querySelector("header");
+
+// handle scroll-up button & progress bar
 let goUpBtn = document.querySelector(".go-up");
 
 window.onscroll = () => {
+  if (window.scrollY > headerElement.offsetHeight) {
+    scrollProgressSpan.style.display = "block";
+
+    // get available scroll height (total actual height - client bar height), documentElement (root element) = <html>
+    let availableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    // progress span width = (scrolled value / available height) * 100
+    scrollProgressSpan.style.width =  `${Math.round((window.scrollY / availableHeight) * 100)}%`;
+  } else {
+    scrollProgressSpan.style.display = "none";
+  }
+
   if (window.scrollY >= 450) goUpBtn.style.display = "block";
   else goUpBtn.style.display = "none";
 };
