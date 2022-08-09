@@ -47,10 +47,14 @@ window.onscroll = () => {
     scrollProgressSpan.style.display = "block";
 
     // get available scroll height (total actual height - client bar height), documentElement (root element) = <html>
-    let availableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let availableHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
 
     // progress span width = (scrolled value / available height) * 100
-    scrollProgressSpan.style.width =  `${Math.round((window.scrollY / availableHeight) * 100)}%`;
+    scrollProgressSpan.style.width = `${Math.round(
+      (window.scrollY / availableHeight) * 100
+    )}%`;
   } else {
     scrollProgressSpan.style.display = "none";
   }
@@ -68,17 +72,21 @@ goUpBtn.onclick = () => {
 };
 
 // handle navigation menu button
-let menuButton = document.querySelector(".menu"),
-  menuactive = false;
+let menuButton = document.querySelector(".menu");
 
 menuButton.onclick = () => {
-  if (!menuactive) {
-    menuButton.nextElementSibling.style.display = "flex";
-    menuactive = true;
-  } else {
-    menuButton.nextElementSibling.style.display = "none";
-    menuactive = false;
+  menuButton.nextElementSibling.classList.toggle("active");
+};
+
+document.onclick = (e) => {
+  if (e.target != menuButton && e.target != menuButton.nextElementSibling) {
+    if (menuButton.nextElementSibling.classList.contains("active"))
+      menuButton.nextElementSibling.classList.toggle("active");
   }
+};
+
+menuButton.nextElementSibling.onclick = (e) => {
+  e.stopPropagation();
 };
 
 // handle sub-menu for header
