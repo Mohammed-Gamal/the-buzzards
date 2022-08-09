@@ -553,6 +553,9 @@ header nav ul {
   }
   header nav ul {
     display: none;
+  }
+  header nav ul.active {
+    display: block;
     position: absolute;
     top: 100%;
     left: 0;
@@ -561,7 +564,7 @@ header nav ul {
     flex-direction: column;
     gap: 0;
   }
-  header nav ul li {
+  header nav ul.active li {
     padding: 20px;
     border-bottom: 1px solid #6b6b6b;
   }
@@ -570,6 +573,7 @@ header ul li.active-li {
   position: relative;
 }
 header nav ul li a {
+  display: block;
   font-size: 17px;
   transition: var(--main-transition);
   -webkit-transition: var(--main-transition);
