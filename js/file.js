@@ -83,6 +83,14 @@ document.onclick = (e) => {
     if (menuButton.nextElementSibling.classList.contains("active"))
       menuButton.nextElementSibling.classList.toggle("active");
   }
+
+  if (
+    e.target !== document.querySelector("header nav ul li.active-li > ul") &&
+    e.target !== document.querySelector("header nav ul li.active-li a.active") &&
+    document.querySelector("header nav ul li.active-li > ul").style.display === "block"
+  ) {
+    document.querySelector("header nav ul li.active-li a.active").click();
+  }
 };
 
 menuButton.nextElementSibling.onclick = (e) => {
