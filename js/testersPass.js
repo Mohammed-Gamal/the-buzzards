@@ -30,7 +30,6 @@ const LoginPasswords = {
   Rigs: "Rigs91021",
   Karuminska: "Karu9512",
   Fierce: "Fierce7215",
-  Hayzen: "Hayzen91290",
 };
 
 securityForm.onsubmit = (e) => {
